@@ -1,0 +1,18 @@
+<span style="color: {{ block.settings.color }}">
+    <p>Hello customer, you are on the bi-weekly deliveries schedule</p>
+    <p>Your next delivery date is 11/14/2022</p>
+    <p></p>
+    <p>Make sure to eat all your <span style="color:green">greens</span> while fresh and to leave your reusable bag outside for the delivery lead</p>
+    </span>
+    {% render "app_snippet" %}
+    {% schema %}
+      {
+        "name": "Customer Output",
+        "target": "section",
+        "stylesheet": "app.css",
+        "javascript": "app.js",
+        "settings": [
+            { "label": "Color", "id": "color", "type": "color", "default": "#000000" }
+        ]
+      }
+    {% endschema %}
